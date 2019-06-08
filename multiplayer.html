@@ -151,6 +151,16 @@
 						page.chatboxEntry.focus();
 						page.chatbox.style.height = ( render.gl.viewportHeight - 145 ) + "px";
 					} );
+          
+					player.on( "openInventory", function()
+					{
+						page.materialSelector.style.visibility = "visible";
+					} );
+          
+  				player.on( "closeInventory", function()
+					{
+						page.materialSelector.style.visibility = "hidden";
+					} );
 
 					// Open game view
 					page.joinInfo.style.visibility = "hidden";

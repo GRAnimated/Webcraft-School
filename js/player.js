@@ -158,6 +158,8 @@ Player.prototype.onKeyEvent = function( keyCode, down )
 	this.keys[keyCode] = down;
 	
 	if ( !down && key == "t" && this.eventHandlers["openChat"] ) this.eventHandlers.openChat();
+  if ( !down && key == "e" && this.eventHandlers["openInventory"] ) this.eventHandlers.openInventory();
+  if ( !down && key == "r" && this.eventHandlers["closeInventory"] ) this.eventHandlers.closeInventory();
 }
 
 // onMouseEvent( x, y, type, rmb )
